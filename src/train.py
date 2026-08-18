@@ -1,4 +1,4 @@
-import pandas
+import pandas as pd
 import joblib
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
@@ -22,7 +22,7 @@ x = df[
 y = df["result"]
 
 # convert pass and fail  1 / 0
-encoder = LabelEncoder
+encoder = LabelEncoder()
 y = encoder.fit_transform(y)
 
 # split the dataset
